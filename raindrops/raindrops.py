@@ -1,11 +1,11 @@
 def convert(number):
-    sound = ""
+    sound = []
     if number % 3 == 0:
-        sound += "Pling"
+        sound.append("Pling")
     if number % 5 == 0:
-        sound += "Plang"
+        sound.append("Plang")
     if number % 7 == 0:
-        sound += "Plong"
-    if sound == "":
+        sound.append("Plong")
+    if not sound:
         return str(number)
-    return sound
+    return "".join(sound)
